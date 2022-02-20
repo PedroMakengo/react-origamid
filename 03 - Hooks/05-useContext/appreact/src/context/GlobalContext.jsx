@@ -9,8 +9,13 @@ export const GlobalStorage = ({ children }) => {
       .then((response) => response.json())
       .then((json) => setProduto(json));
   }, []);
+
+  function limparDados() {
+    setProduto(null);
+  }
+
   return (
-    <GlobalContext.Provider value={{ produto, setProduto }}>
+    <GlobalContext.Provider value={{ produto, limparDados }}>
       {children}
     </GlobalContext.Provider>
   );

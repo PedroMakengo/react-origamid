@@ -3,22 +3,16 @@ import { GlobalContext } from "../../context/GlobalContext";
 import ProdutoItem from "../ProdutoItem";
 
 const Produto = () => {
-  const data = React.useContext(GlobalContext);
-  const dataProduto = data.produto;
+  const { produto } = React.useContext(GlobalContext);
 
-  function limparDados() {
-    data.setProduto(null);
-  }
-
-  if (dataProduto === null) return null;
+  if (produto === null) return null;
   return (
     <div>
       <ul>
-        {dataProduto.map(({ id, nome }) => (
+        {produto.map(({ id, nome }) => (
           <ProdutoItem key={id} nome={nome} />
         ))}
       </ul>
-      <button onClick={limparDados}>Limpar Dados</button>
     </div>
   );
 };
