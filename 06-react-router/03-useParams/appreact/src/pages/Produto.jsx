@@ -1,15 +1,15 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 const Produto = () => {
-  // const [produto, setProduto] = useState(null);
   const params = useParams();
+  const location = useLocation();
 
-  // fetch("https://origamid.")
-  //   .then((response) => response.json())
-  //   .then((json) => setProduto(json));
+  console.log(location);
+  // Entender o URL
+  // const search = new URLSearchParams(location.search);
+  // console.log(search.get("q"));
 
-  console.log(params);
   return (
     <div>
       <h1>Produto: {params.id}</h1>

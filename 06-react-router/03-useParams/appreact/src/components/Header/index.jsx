@@ -1,7 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    console.log("Mudou a rota");
+  }, [location]);
+
   return (
     <div>
       <NavLink activeStyle={{ color: "tomado" }} to="/" end>
