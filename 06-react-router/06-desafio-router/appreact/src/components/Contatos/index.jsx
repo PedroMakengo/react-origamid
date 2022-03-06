@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 const Contatos = () => {
   return (
     <div>
-      <h1>Produto</h1>
+      <h1>Contactos</h1>
     </div>
   );
 };
