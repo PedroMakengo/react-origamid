@@ -17,10 +17,6 @@ const Header = () => {
       <NavLink activeStyle={{ color: "tomado" }} to="sobre">
         Sobre
       </NavLink>{" "}
-      |{" "}
-      <NavLink activeStyle={{ color: "tomado" }} to="login">
-        Login
-      </NavLink>
     </div>
   );
 };
