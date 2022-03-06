@@ -8,7 +8,7 @@ const Header = () => {
       <ul>
         <li>
           <NavLink
-            activeClassName={styles.active}
+            activeclassname={styles.active}
             className={styles.link}
             to="/"
             end
@@ -18,7 +18,7 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            activeClassName={styles.active}
+            activeclassname={styles.active}
             className={styles.link}
             to="contatos"
           >

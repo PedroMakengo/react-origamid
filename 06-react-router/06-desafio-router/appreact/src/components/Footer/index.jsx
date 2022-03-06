@@ -3,9 +3,9 @@ import styles from "./index.module.css";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <h1>Footer</h1>
-    </div>
+    </footer>
   );
 };
 

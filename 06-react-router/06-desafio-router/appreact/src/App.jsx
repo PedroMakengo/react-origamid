@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -7,6 +6,8 @@ import Header from "./components/Header";
 import Contatos from "./components/Contatos";
 import Produtos from "./components/Produtos";
 import Footer from "./components/Footer";
+
+import "./App.css";
 
 const App = () => {
   return (
