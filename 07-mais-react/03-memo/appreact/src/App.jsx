@@ -1,11 +1,14 @@
 import React from "react";
-import Contato from "./components/Contato";
+import Header from "./components/Header";
 
 const App = () => {
+  const [contar, setContar] = React.useState(0);
   return (
     <div>
-      <Contato />
-      {/* Pesquisar sobre o react lazy e suspense */}
+      <Header />
+      <button onClick={() => setContar((contar) => contar + 1)}>
+        {contar}
+      </button>
     </div>
   );
 };
