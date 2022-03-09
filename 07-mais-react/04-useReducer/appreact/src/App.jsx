@@ -1,21 +1,27 @@
 import React from "react";
+import Exemplo from "./components/Exemplo";
 
+function reducer(state, action) {
+  console.log(state);
+
+  switch (action) {
+    case "aumentar":
+      return state + 1;
+    case "diminuir":
+      return state - 1;
+    default:
+      throw new Error();
+  }
+}
 const App = () => {
-  const [contar, setContar] = React.useState(0);
+  const [state, dispatch] = React.useReducer(reducer, 0);
 
-  function aumentar() {
-    setContar((contar) => contar + 1);
-  }
-
-  function diminuir() {
-    setContar((contar) => contar + 1);
-  }
   return (
     <div>
-      <button onClick={aumentar}>+</button>
-      <button onClick={diminuir}>-</button>
-
-      <p>{contar}</p>
+      <button onClick={() => dispatch("aumentar")}>+</button>
+      <button onClick={() => dispatch("diminuir")}>-</button>
+      <p>{state}</p>
+      <Exemplo />
     </div>
   );
 };
