@@ -23,7 +23,10 @@ const UserPost = () => {
         console.log(response);
         return response.json();
       })
-      .then((json) => console.log(json));
+      .then((json) => {
+        console.log(json);
+        return json;
+      });
   }
 
   return (
