@@ -2,7 +2,7 @@ import React from "react";
 const App = () => {
   return (
     <div>
-      <h1>Começando do zero</h1>
+      <h1>App React</h1>
     </div>
   );
 };
