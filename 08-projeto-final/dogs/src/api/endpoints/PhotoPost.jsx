@@ -10,12 +10,18 @@ const PhotoPost = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("https://dogsapi.origamid.dev/json/api/user", {
+    const formData = new FormData();
+    formData.append("img", img);
+    formData.append("nome", nome);
+    formData.append("peso", peso);
+    formData.append("idade", idade);
+
+    fetch("https://dogsapi.origamid.dev/json/api/photo", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        Authorization: "Bearer" + token,
       },
-      body: {},
+      body: formData,
     })
       .then((response) => {
         console.log(response);
@@ -38,7 +44,7 @@ const PhotoPost = () => {
       <input
         type="text"
         value={nome}
-        placeholder="nnome"
+        placeholder="nome"
         onChange={({ target }) => setNome(target.value)}
       />
       <input
