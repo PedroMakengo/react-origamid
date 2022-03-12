@@ -53,12 +53,7 @@ const PhotoPost = () => {
         placeholder="idade"
         onChange={({ target }) => setIdade(target.value)}
       />
-      <input
-        type="file"
-        value={img}
-        placeholder="img"
-        onChange={({ target }) => setImg(target.value)}
-      />
+      <input type="file" onChange={({ target }) => setImg(target.files[0])} />
       <button>Enviar</button>
     </form>
   );
