@@ -31,7 +31,8 @@ img {
   max-width: 100%;
 }
 
-button {
+button,
+input {
   display: block;
   font-size: 1rem;
   font-family: var(--type-first);
