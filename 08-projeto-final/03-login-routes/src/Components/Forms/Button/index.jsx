@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./index.module.css";
 
-const Button = ({ children }) => {
+const Button = ({ children, ...props }) => {
   return (
-    <button disabled className={styles.button}>
+    <button {...props} className={styles.button}>
       {children}
     </button>
   );

@@ -31,7 +31,7 @@ const LoginForm = () => {
       <form action="" onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" />
         <Input label="Senha" type="password" name="password" />
-        <Button>Entrar</Button>
+        <Button disabled>Entrar</Button>
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </section>
