@@ -6,8 +6,8 @@ body {
   padding-top: 4rem;
   margin: 0px;
   color: #333;
-  --type-first: Helvetica, Arial, sans-serif;
-  --type-second: "Spectral", Georgia;
+  --type-first: JetBrains;
+  --type-second: JetBrains;
   font-family: var(--type-first);
 }
 
@@ -41,12 +41,34 @@ input {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 .container {
   max-width: 50rem;
   padding: 0 1rem;
   margin: 0 auto;
+}
+
+.title {
+  font-family: var(--type-secondary);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #fb1;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
 }
 
 .animeLeft {
