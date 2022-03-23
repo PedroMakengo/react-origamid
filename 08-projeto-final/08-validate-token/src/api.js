@@ -27,6 +27,7 @@ export function TOKEN_VALIDATE_POST(token) {
   };
 }
 
+// Pegando o usuário
 export function USER_GET(token) {
   return {
     url: API_URL + "/api/user",
